@@ -13,7 +13,10 @@ scikit-learn>=1.3.0
 xgboost>=2.0.0
 
 # --- Deep Learning (Redes Neurais e CNN) ---
-tensorflow>=2.13.0
+# Use the CPU build and pin a compatible minor version. Streamlit Cloud
+# currently runs newer Python versions; we'll request Python 3.11 in
+# `runtime.txt` so matching TensorFlow wheels are available.
+tensorflow-cpu>=2.13.0,<2.14.0
 
 # --- Visualização ---
 matplotlib>=3.7.0
